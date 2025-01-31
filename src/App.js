@@ -1,4 +1,4 @@
-import { useState } from "react";
+import {useState } from "react";
 import "./App.css";
 import ContactForm from "./components/ContactForm/ContactForm";
 import SimpleShoppingCart from "./components/ProductTable/ProductTable";
@@ -17,7 +17,6 @@ function App() {
 
   return (
     <div className="body">
-      {/* Pass activeStep as a prop to the Stepper */}
       <HorizontalLinearStepper activeStep={activeStep} />
 
       {/* Render Components Based on Step */}
@@ -29,10 +28,8 @@ function App() {
         </>
       )}
 
-      {/* Buttons to Change Steps */}
       <div className="buttonBody">
         <button disabled={activeStep === 0} onClick={handleBack} className="button">
-          {/* Back */}
           {activeStep === 0 ? "Continue Shopping" : "Back"}
         </button>
         <button onClick={handleNext} disabled={activeStep === 2}  className="button">
